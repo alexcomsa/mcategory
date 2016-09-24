@@ -16,16 +16,19 @@ public class TestCategory  extends TestWatcher{
 
     protected void starting(Description d) {
        Category existing = d.getAnnotation(Category.class);
-        Class<?>[] values = existing.value();
 
-        if(values!=null){
+
+        if(existing!=null){
+            Class<?>[] values = existing.value();
             categories = new String[values.length];
+
             for(int index=0;index<values.length;index++){
 
                 categories[index]=values[index].getCanonicalName();
 
             }
         }
+        else categories=new String[0];
 
     }
 
