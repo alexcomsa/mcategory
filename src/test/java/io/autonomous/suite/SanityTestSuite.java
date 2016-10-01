@@ -1,4 +1,4 @@
-package suite;
+package io.autonomous.suite;
 
 import io.autonomous.test.FunctionalTest;
 import io.autonomous.test.OtherFunctionalTest;
@@ -11,10 +11,12 @@ import org.junit.runners.Suite;
 /**
  * Created by alex on 9/24/16.
  */
+
 @RunWith(Categories.class)
-@Categories.IncludeCategory(Smoke.class)
-@Categories.ExcludeCategory(Sanity.class)
+@Categories.IncludeCategory(Sanity.class)
+@Categories.ExcludeCategory(Smoke.class)
 @Suite.SuiteClasses({FunctionalTest.class, OtherFunctionalTest.class})
-    public class SmokeTestSuite {
+    public class SanityTestSuite {
+
 
 }
