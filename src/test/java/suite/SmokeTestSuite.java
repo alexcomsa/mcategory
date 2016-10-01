@@ -1,4 +1,4 @@
-package io.autonomous.suite;
+package suite;
 
 import io.autonomous.test.FunctionalTest;
 import io.autonomous.test.OtherFunctionalTest;
